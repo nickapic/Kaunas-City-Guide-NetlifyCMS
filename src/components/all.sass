@@ -1,5 +1,4 @@
-@import "~bulma/sass/utilities/initial-variables"
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap')
 // Config vars
 // Kaldi logo brand color: #FD461E
 $kaldi-red: #D64000
@@ -10,16 +9,39 @@ $primary-invert: $kaldi-red-invert
 $body-color: #333
 $black: #2b2523
 
+body
+  font-family: 'Barlow Condensed', sans-serif
 a
   color: white
+  text-decoration: none
+  margin-right: 1rem
 
 span
   color: white
+
 .navbar
   background-color: #72033F !important
+  color: white
+  height: 3.5rem
+  z-index: 10
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  display: flex
+
+.container
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 90%
+  margin: 0 auto
+
 .navbar .navbar-menu
   box-shadow: none !important
-
+  color: white
+.navbar-brand
+  display: flex
 .content .taglist
   list-style: none
   margin-bottom: 0
@@ -46,7 +68,7 @@ span
   background-size: cover
   background-position: bottom
   display: flex
-  justify-content: center
+  justify-content: flex-start
   align-items: center
 
 .full-width-image
@@ -79,7 +101,8 @@ span
   margin-top: 0 !important
 
 .navbar-item .icon
-  color: $primary
+  color: white
+  text-decoration: none
 // Override for use of svg's from https://simpleicons.org/
 .icon svg
   width: 1.5rem
@@ -92,13 +115,8 @@ footer.footer
   background-color: transparent
 
 //Menu overrides
-$menu-item-color: $white-ter
-$menu-item-hover-color: $black !important
-$menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
-$menu-label-color: $white-ter
+.navbar-item
+  color: white !important
 
 .menu-label
   font-size: 1em !important
@@ -111,13 +129,16 @@ $menu-label-color: $white-ter
 .social a
   padding: .5em .5em .3em .5em
   border-radius: 1em
-  background-color: $white-ter
+  background-color: white
   margin: .5em
   width: 1em
   height: 1em
   vertical-align: middle
   display: inline
-
+.hero-action-button
+  background-color: #fff
+  color: #000000
+  padding: 10px 15px
 // blog roll
 .blog-list-item.is-featured
   background-color: #d6400033
@@ -127,8 +148,6 @@ $menu-label-color: $white-ter
 .blog-list-item .featured-thumbnail
   flex-basis: 35%
   margin: 0 1.5em 0 0
-
-@import "~bulma"
 
 // responsiveness
   +tablet-only

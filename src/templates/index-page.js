@@ -16,13 +16,12 @@ export const IndexPageTemplate = ({
 }) => (
   <div>
     <div
-      className="full-width-image margin-top-0"
+      className="full-width-image-container margin-top-0"
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`
+        backgroundPosition: `top left`
       }}
     >
       <div
@@ -31,7 +30,7 @@ export const IndexPageTemplate = ({
           height: "150px",
           lineHeight: "1",
           justifyContent: "space-around",
-          alignItems: "left",
+          alignItems: "flex-start",
           flexDirection: "column"
         }}
       >
@@ -46,12 +45,10 @@ export const IndexPageTemplate = ({
           {title}
         </h1>
         <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+          className="hero-action-button"
           style={{
-            color: "white",
             lineHeight: "1",
-            padding: "0.25em",
-            margin: "1em",
+            margin: "1em"
           }}
         >
           {subheading}
