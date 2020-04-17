@@ -28,6 +28,7 @@ export const IndexPageTemplate = ({
         style={{
           display: "flex",
           height: "150px",
+          marginLeft: "5rem",
           lineHeight: "1",
           justifyContent: "space-around",
           alignItems: "flex-start",
@@ -38,8 +39,9 @@ export const IndexPageTemplate = ({
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
             color: "white",
-            lineHeight: "1",
-            padding: "0.25em"
+            fontSize: "4rem",
+            margin: "0.5rem 0rem",
+            width: "50%"
           }}
         >
           {title}
@@ -47,8 +49,7 @@ export const IndexPageTemplate = ({
         <h3
           className="hero-action-button"
           style={{
-            lineHeight: "1",
-            margin: "1em"
+            margin: "1rem 0"
           }}
         >
           {subheading}
